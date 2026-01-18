@@ -1,4 +1,4 @@
-function Header() {
+function Header({setQuery}) {
     return (
         <header className="sticky top-0 z-40 bg-white border-b">
             <div className="max-w-[1400px] mx-auto px-4 h-16 flex items-center justify-between">
@@ -21,6 +21,7 @@ function Header() {
 
                 <div className="hidden md:block w-[360px]">
                     <input id="search"
+                    onChange={(e) => setQuery(e.target.value)}
                         type="text"
                         placeholder="Search student..."
                         className="w-full rounded-lg border px-4 py-2 text-sm outline-none focus:border-indigo-500"
